@@ -9,16 +9,15 @@ function truncateString(str, num) {
 			textTuncated = str.slice(0, num - 3);
 			textTuncated = textTuncated + "...";
 			str = textTuncated;
-		} else {// if (str.length <= 3) {
+		} 
+		
+		if (num <= 3) {
+			textTuncated = str.slice(0, num);
 			textTuncated = textTuncated + "...";
 			str = textTuncated;
 		}
-		
-	
-	} else {
-//		textTuncated = textTuncated + "...";
-//		str = textTuncated;
 	}
+		
 	return str;
 }
 
